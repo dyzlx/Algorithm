@@ -7,20 +7,22 @@ public class DSinglyLinkedListMain {
 
         myLinkedList.addAtLast("ele1");
         myLinkedList.addAtLast("ele2");
-        myLinkedList.addAtFirst("ele0");
+        myLinkedList.addAtLast("ele3");
+
         System.out.println(myLinkedList.length());
         myLinkedList.print();
 
-        myLinkedList.addByIndex("ele-index-3", 2);
+        myLinkedList.removeByIndex(1);
         System.out.println(myLinkedList.length());
         myLinkedList.print();
 
-        myLinkedList.addByIndex("ele-index-1", 1);
+        myLinkedList.removeByIndex(1);
         System.out.println(myLinkedList.length());
         myLinkedList.print();
 
-        myLinkedList.addByIndex("ele-index-0", 0);
+        myLinkedList.removeByIndex(0);
         System.out.println(myLinkedList.length());
         myLinkedList.print();
+
     }
 }

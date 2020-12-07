@@ -32,16 +32,36 @@ public class DSinglyLinkedList<T> {
         newNode.setNext(temp);
     }
 
-    public void addByIndex(T value, int index) {
+    /*
+    index location is [current.next], and it should insert between [current] and [current.next]
+    [current] is the pre actually
 
+    you can only check out of rang by define a global var length, and check if index is larger than length
+    but you mast ensure the var length is thread-safe
+     */
+    public void addByIndex(T value, int index) throws Exception {
+        SinglyLinkedNode<T> newNode = new SinglyLinkedNode<>(value);
+        SinglyLinkedNode<T> current = this.head;
+        int currentIndex = 0;
+        while(Objects.nonNull(current.getNext())) {
+            if(currentIndex == index) {
+                SinglyLinkedNode<T> temp = current.getNext();
+                current.setNext(newNode);
+                newNode.setNext(temp);
+                return;
+            }
+            currentIndex++;
+            current = current.getNext();
+        }
+        throw new Exception("index "+index+" out of range "+currentIndex);
     }
 
-    public void removeAtLast() {
-
+    public T removeAtLast() {
+        return null;
     }
 
-    public void removeAtFirst() {
-
+    public T removeAtFirst() {
+        return null;
     }
 
     public int length() {

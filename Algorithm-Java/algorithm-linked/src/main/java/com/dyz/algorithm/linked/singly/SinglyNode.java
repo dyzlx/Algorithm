@@ -5,11 +5,13 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class SinglyLinkedNode<T> {
-    private T value;
-    private SinglyLinkedNode<T> next;
+public class SinglyNode<T> {
 
-    public SinglyLinkedNode(T value) {
+    private T value;
+
+    private SinglyNode<T> next;
+
+    public SinglyNode(T value) {
         this.value = value;
     }
 }

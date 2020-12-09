@@ -2,6 +2,12 @@ package com.dyz.algorithm.leetcode;
 
 import java.util.Stack;
 
+
+/**
+ *
+ * implement a queue by using two stack
+ *
+ */
 public class ImplementQueueByTwoStack {
     public static void main(String[] args) {
         MyStackQueue<String> queue = new MyStackQueueBetter<>();
@@ -36,9 +42,9 @@ public class ImplementQueueByTwoStack {
         }
     }
 
-    /**
-     * 优化点在连续add或者take时不用倒换栈中数据
-     * @param <T>
+
+    /*
+    The optimization:  need't to swap the data between two stack when add or Take continuously.
      */
     static class MyStackQueueBetter<T> extends MyStackQueue<T> {
 

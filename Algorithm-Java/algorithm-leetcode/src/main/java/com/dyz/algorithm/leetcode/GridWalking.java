@@ -2,7 +2,9 @@ package com.dyz.algorithm.leetcode;
 
 /**
  *
- * x * y的网格，从左上走到右下，每次只能向右或者向下走，一共多少种走法。
+ * A x * y grid, going from left top to right bottom.
+ * you can only go to right or go to down,
+ * how many ways are there?
  *
  */
 public class GridWalking {
@@ -12,6 +14,9 @@ public class GridWalking {
         System.out.println(count);
     }
 
+    /*
+     recursion
+     */
     public static int walking(int x, int y) {
         if (x < 1 || y < 1) {
             return 0;
